@@ -100,10 +100,10 @@ function App() {
   }
 
   return (
-    <>
-    <main className='relative overflow-hidden h-screen'>
-      <img className='absolute -top-30 -right-30 -z-1' src={yellowBlob} aria-hidden="true" alt=""/>
-      <img className='absolute -bottom-20 -left-25 -z-1' src={blueBlob} aria-hidden="true" alt=""/>
+    
+    <main className='relative overflow-hidden'>
+        <img className='absolute -top-30 -right-30 -z-1' src={yellowBlob} aria-hidden="true" alt=""/>
+        <img className='absolute -bottom-20 -left-25 -z-1' src={blueBlob} aria-hidden="true" alt=""/>
      { startMenu ? <StartMenu flipStartMenu ={flipStartMenu}/> :<>
       <section className='h-[90%] flex flex-col items-center justify-center'>
         {questionElementsArr}
@@ -120,7 +120,7 @@ function App() {
       }
      </main>
      
-    </> 
+    
   );
 }
 
