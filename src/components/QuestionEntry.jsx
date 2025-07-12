@@ -30,7 +30,7 @@ export default function QuestionEntry(props) {
     })
 
     return (
-            <form className='w-[90%]  border-b py-5 border-b-[#DBDEF0] sm:py-10'>
+            <form className='w-[90%] border-b py-5 border-b-[#DBDEF0] sm:py-7'>
                 <p className='text-indigo-900 font-bold mb-3 sm:text-lg'>{he.decode(props.questionText)}</p>
                 <div className='flex gap-3 flex-wrap '>
                     {answerElArray}

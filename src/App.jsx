@@ -1,5 +1,4 @@
 import { useState, useEffect} from 'react'
-import './App.css'
 import StartMenu from './components/StartMenu';
 import blueBlob from './imgs/blob-blue.png'
 import yellowBlob from './imgs/blob-yellow.png'
@@ -101,11 +100,11 @@ function App() {
 
   return (
     
-    <main className='relative overflow-hidden'>
+    <main className='relative overflow-hidden min-h-screen flex flex-col justify-around'>      
         <img className='absolute -top-30 -right-30 -z-1' src={yellowBlob} aria-hidden="true" alt=""/>
         <img className='absolute -bottom-20 -left-25 -z-1' src={blueBlob} aria-hidden="true" alt=""/>
      { startMenu ? <StartMenu flipStartMenu ={flipStartMenu}/> :<>
-      <section className='h-[90%] flex flex-col items-center justify-center'>
+      <section className='flex-grow flex flex-col items-center justify-around'>
         {questionElementsArr}
       </section>
       <section className='flex gap-5 justify-center items-center my-2 sm:my-5 sm:gap-10'>
@@ -113,7 +112,7 @@ function App() {
           className='font-bold text-[#293264]'
         >You scored {countAnswers()}/5 correct answers</p>}
         <button
-          className='w-40 bg-[#4D5B9E] rounded-lg h-[50px] text-[#F5F7FB]'
+          className='w-40 bg-[#4D5B9E] rounded-lg h-[50px] text-[#F5F7FB] cursor-pointer mt-5'
           onClick={answeredChecked ? restartGame : handleCheckAnswers}>{answeredChecked ? 'Start new Game' : 'Check answers'}</button>
       </section>
       </>
